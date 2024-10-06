@@ -1,0 +1,174 @@
+{
+  "vehicles": [
+    {
+      "id": "a3e1d8d2-4b71-4f5a-94cf-7f2a9d5e1634",
+      "telemetry": {
+        "speed": 65.0,
+        "batteryLevel": 85.5,
+        "tirePressure": 36.0,
+        "motorEfficiency": 92.0,
+        "regenerativeBraking": true,
+        "batteryTemperature": 30.5,
+        "energyConsumption": 10.5,
+        "gpsLocation": { "lat": 37.7749, "lon": -122.4194 },
+        "suspensionStatus": 65.0,
+        "odometer": 12035.2,
+        "chargingStatus": false,
+        "temperature": 22.5
+      }
+    },
+    {
+      "id": "d9e8e5f2-3d2e-42f4-9579-56a8496a967d",
+      "telemetry": {
+        "speed": 45.2,
+        "batteryLevel": 72.0,
+        "tirePressure": 34.5,
+        "motorEfficiency": 88.0,
+        "regenerativeBraking": false,
+        "batteryTemperature": 28.0,
+        "energyConsumption": 16.0,
+        "gpsLocation": { "lat": 34.0522, "lon": -118.2437 },
+        "suspensionStatus": 68.0,
+        "odometer": 18500.8,
+        "chargingStatus": true,
+        "temperature": 24.0
+      }
+    },
+    {
+      "id": "f4c2b5db-79b9-4b37-9f83-5a9b1e91b85a",
+      "telemetry": {
+        "speed": 78.5,
+        "batteryLevel": 63.5,
+        "tirePressure": 35.0,
+        "motorEfficiency": 91.0,
+        "regenerativeBraking": true,
+        "batteryTemperature": 32.1,
+        "energyConsumption": 19.0,
+        "gpsLocation": { "lat": 40.7128, "lon": -74.006 },
+        "suspensionStatus": 60.0,
+        "odometer": 21000.0,
+        "chargingStatus": false,
+        "temperature": 21.5
+      }
+    },
+    {
+      "id": "3b49829d-40d5-43c1-b1a7-7b46fd3e7131",
+      "telemetry": {
+        "speed": 50.0,
+        "batteryLevel": 90.0,
+        "tirePressure": 36.2,
+        "motorEfficiency": 87.5,
+        "regenerativeBraking": false,
+        "batteryTemperature": 27.5,
+        "energyConsumption": 17.0,
+        "gpsLocation": { "lat": 51.5074, "lon": -0.1278 },
+        "suspensionStatus": 63.0,
+        "odometer": 9500.0,
+        "chargingStatus": true,
+        "temperature": 23.0
+      }
+    },
+    {
+      "id": "be3f5e0f-0b89-4f76-80cf-1e07359be0d5",
+      "telemetry": {
+        "speed": 40.0,
+        "batteryLevel": 78.0,
+        "tirePressure": 35.5,
+        "motorEfficiency": 89.0,
+        "regenerativeBraking": true,
+        "batteryTemperature": 29.0,
+        "energyConsumption": 15.0,
+        "gpsLocation": { "lat": 48.8566, "lon": 2.3522 },
+        "suspensionStatus": 68.0,
+        "odometer": 13250.5,
+        "chargingStatus": false,
+        "temperature": 25.0
+      }
+    },
+    {
+      "id": "6e897147-cdbd-44eb-a519-5f40fcb42b1c",
+      "telemetry": {
+        "speed": 60.0,
+        "batteryLevel": 68.0,
+        "tirePressure": 34.8,
+        "motorEfficiency": 93.0,
+        "regenerativeBraking": false,
+        "batteryTemperature": 31.0,
+        "energyConsumption": 17.0,
+        "gpsLocation": { "lat": 35.6895, "lon": 139.6917 },
+        "suspensionStatus": 61.0,
+        "odometer": 25000.3,
+        "chargingStatus": false,
+        "temperature": 22.0
+      }
+    },
+    {
+      "id": "a1b2c3d4-e5f6-4a7b-b8c9-d8e7f6a5b4c3",
+      "telemetry": {
+        "speed": 70.0,
+        "batteryLevel": 81.0,
+        "tirePressure": 36.0,
+        "motorEfficiency": 90.0,
+        "regenerativeBraking": true,
+        "batteryTemperature": 33.5,
+        "energyConsumption": 19.0,
+        "gpsLocation": { "lat": -33.8688, "lon": 151.2093 },
+        "suspensionStatus": 62.0,
+        "odometer": 14500.0,
+        "chargingStatus": false,
+        "temperature": 20.5
+      }
+    },
+    {
+      "id": "57a8c4db-5a7e-4894-8b5f-7c7a7fb82bfb",
+      "telemetry": {
+        "speed": 55.0,
+        "batteryLevel": 73.0,
+        "tirePressure": 35.3,
+        "motorEfficiency": 88.0,
+        "regenerativeBraking": false,
+        "batteryTemperature": 29.5,
+        "energyConsumption": 16.0,
+        "gpsLocation": { "lat": 55.7558, "lon": 37.6173 },
+        "suspensionStatus": 67.0,
+        "odometer": 17050.5,
+        "chargingStatus": true,
+        "temperature": 26.0
+      }
+    },
+    {
+      "id": "c8f9a6e5-7bdf-403c-8c92-4a9ef7d5b8c6",
+      "telemetry": {
+        "speed": 80.0,
+        "batteryLevel": 95.0,
+        "tirePressure": 36.5,
+        "motorEfficiency": 94.0,
+        "regenerativeBraking": true,
+        "batteryTemperature": 34.0,
+        "energyConsumption": 20.0,
+        "gpsLocation": { "lat": 52.52, "lon": 13.405 },
+        "suspensionStatus": 65.0,
+        "odometer": 8500.0,
+        "chargingStatus": false,
+        "temperature": 18.0
+      }
+    },
+    {
+      "id": "e1a8c3d9-3c7b-4738-9b6a-f8c7e5a4c5b1",
+      "telemetry": {
+        "speed": 62.0,
+        "batteryLevel": 88.0,
+        "tirePressure": 35.7,
+        "motorEfficiency": 91.0,
+        "regenerativeBraking": false,
+        "batteryTemperature": 28.5,
+        "energyConsumption": 30.0,
+        "gpsLocation": { "lat": 39.9042, "lon": 116.4074 },
+        "suspensionStatus": 70.0,
+        "odometer": 19500.0,
+        "chargingStatus": true,
+        "temperature": 19.0
+      }
+    }
+  ]
+}
