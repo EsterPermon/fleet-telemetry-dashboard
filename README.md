@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+# Fleet Telemetry Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Cool application to show real time data from a fleet of 10 vehicles.
 
-## Available Scripts
+## Get started
 
-In the project directory, you can run:
+1. Install dependencies
 
-### `npm start`
+   ```bash
+   npm install
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. ### Run the app
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+| Command     | Description      |
+| ----------- | ---------------- |
+| `npm start` | Runs in dev mode |
+| `npm test`  | Runs Unit tests  |
 
-### `npm test`
+## Approach
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Data fetching and management
 
-### `npm run build`
+This project simulates real time data collection and visualization from a fleet. The initial data is read from a mock json and stored in a `Map` structure for performance reasons, since accessing a map value is `O(1)`.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Also, `reduxjs-toolkit` is used for state management and the initial fetch is done by an async action to already provide support to real API request.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+#### Real time updates
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To simulate the real time updates, a polling solution is used. Every 3 seconds, a random amount of vehicles is selected (at least one and at most all), for each vehicle also a random amount of data points (at least one and at most all) is selected to be randomly re-generated.
 
-### `npm run eject`
+To not overload the main thread of the application, a worker is used to host this data update logic. The worker is intialized on the home component, and terminated when the component unmounts, to avoid memory leak.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### Dashboard
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The data is showed in a table shape on the `/` route. The table supports sorting my column, which is enabled by clicking on the column's header. Also, clicking on each row navigates to `/vehicle:vehicleId`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+#### Notifications
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+There are safety thresholds defined under `/utils/constants` and when a vehicle exceeds any of these thresholds, a notification is generated. The notifications logic is re-checked every time the vehicles map is updated. To show the notifications there is a button rendered on the top bar of the home screen.
 
-## Learn More
+Notifications are based, groupped and counted by vehicle, meaning if there is only one vehiche with 7 notifications, the number showed in the button is 1. Clicking on notifications card also navigates to `/vehicle:vehicleId`. Although this screen already shows the notifications card when available.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Tests
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+There are unit tests for the following logics
+
+- Generate random values for each data point
+- Table column's sorting
+- Notifications generation
+- Thresholds excesses
+
+## Final Considerations
+
+It's important to keep in mind that this project's working time was only a few hours, so I had to compromise in order to deliver a working MVP. Bellow is a list of topics I would have worked better with more time:
+
+- Overall project: UI: Provide a more visual data representation, ploting charts at least for the most critical data points.
+- Keeping record of data history, which would also be useful for plotting charts
+- Generating random data more consistently and based on the previous values.
+- Separating notifications between alerts and warnings and providing visual differentiation
+- Alrady setup pagination support to future scaling up vehicles number
+- Increase overall test coverage:
+
+  - Assure that all components are rendered properly
+  - Clicking events provide correct route redirection
+  - Table sorting responds correctly on clicks
+  - Correct styles are applied to critical values
