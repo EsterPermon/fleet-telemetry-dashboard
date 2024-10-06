@@ -1,0 +1,49 @@
+.vehicleDetailsPageHeader {
+  display: flex;
+  padding: 8px;
+  background-color: lightblue;
+}
+
+.vehicleDetailsPageBody {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vehicleDetailsContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 15px;
+  border: 3px solid cadetblue;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+}
+
+.vehicleDetailsHeader {
+  background-color: cadetblue;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 5px 10px;
+  color: white;
+}
+
+.vehicleDataPointHeader {
+  font-weight: bold;
+  color: cadetblue;
+}
+
+.vehicleDataPoint {
+  padding: 10px;
+}
+
+.vehicleNotFound {
+  font-weight: bold;
+  padding: 10px;
+  color: red;
+}
+
+.dangerValue {
+  color: red;
+  font-weight: bold;
+}
