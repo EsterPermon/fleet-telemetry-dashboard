@@ -1,0 +1,22 @@
+.notificationsCenterContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.notificationsCenterHeader {
+  display: flex;
+  padding: 8px;
+  background-color: lightpink;
+}
+
+.notificationsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-gap: 10px;
+}
+
+.emptyNotificationsMessage {
+  font-weight: bold;
+  padding: 10px;
+  color: red;
+}
