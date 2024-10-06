@@ -1,0 +1,67 @@
+.tableContainer {
+  max-height: calc(100vh - 64px); /* NOTE: decreases topbar height */
+  max-width: 100%;
+  overflow: auto;
+}
+
+.table {
+  margin: 8px;
+  width: calc(100% - 16px); /* NOTE: decreases horizontal margin */
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.table th,
+.table td {
+  padding: 5px;
+  border: 1px solid black;
+}
+
+th {
+  position: sticky;
+  top: 0;
+  background-color: aliceblue;
+  font-weight: bold;
+  z-index: 2;
+  padding: 8px;
+}
+
+td {
+  cursor: pointer;
+}
+
+.idCell {
+  position: sticky;
+  left: 0;
+  background-color: aliceblue;
+  font-weight: bold;
+  z-index: 1;
+  padding: 8px;
+}
+
+.idCellHeader {
+  left: 0;
+  z-index: 3;
+}
+
+.sortableHeaderCell {
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.sortableHeaderCell img {
+  margin-left: 2px;
+}
+
+.dangerCell {
+  color: red;
+  font-weight: bold;
+}
+
+.noVehiclesMessage {
+  font-weight: bold;
+  padding: 10px;
+  color: red;
+}

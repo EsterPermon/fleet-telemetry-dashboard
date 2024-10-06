@@ -1,0 +1,22 @@
+.dashboardContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  padding: 8px;
+  background-color: lightgray;
+}
+
+.loadingVehiclesMessage {
+  font-weight: bold;
+  padding: 10px;
+  color: orange;
+}
+
+.errorVehiclesMessage {
+  font-weight: bold;
+  padding: 10px;
+  color: red;
+}
